@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "arial", sans-serif}
+.menu {display: none}
+body{
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-image: url(imga.jpg);
+  min-height: 90%;
+  align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.nav{
+margin:10px;
+width:180px;
+height:130px;
+}
+.text{
+text-align: left;
+margin-left:20px;
+}
+.text h1{
+font-family: "Colonna MT";
+font-size: 10vw;
+color:transparent; 
+margin-left:340px;
+    margin-top: -40px;
+	width:550px;
+	height:150px;
+	 -webkit-text-stroke: 0.1px white; 
+	text-stroke: 1px ;	
+}
+p{
+font-size: 25px; 
+color:white;
+}
+.reserve button{
+align-items:center;
+background-color:transparent;
+color:white;
+border:1px;
+width:150px;
+float:right;
+border:1px solid #fff;
+border-radius:10px;
+margin-top:-620px;
+margin-right:50px;
+height:auto;
+}
+.style h1{
+border-bottom:5px solid;
+color:white;
+}
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .text{
+    animation: slideInFromLeft .5s ease-out; 
+  }
+
+.text h4{
+font-weight:60px;
+font-size: 2vw; 
+    margin-top: -10px;
+	margin-left:30px;
+color:white;
+}
+@keyframes slideInFromRight{
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes rotateImage {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+   @keyframes changeImage {
+       0%{
+	   opacity: 1;
+        content: url('fries.png');
+      }
+      50%{
+	  opacity: 1;
+        content: url('pizza.png');
+      }
+     100%{
+	  opacity: 1;
+        content: url('noodles.png');
+      }
+    }
+button {
+  background-color: transparent;
+  color: black;
+  padding: 14px 20px;
+  margin-left: 90px;
+  border: none;
+  cursor: pointer;
+  width: 80%;
+}
+.reserve button:hover,.reserve button:focus {
+  opacity: 0.8;
+  background-color:white;
+  color:black;
+}
+button:hover,.button:focus {
+  opacity: 60%;
+  background-color:green;
+  color:white;
+}
+
+.png{
+width:500px;
+height:500px;
+float:right;
+margin-top:-500px;
+margin-right:150px;
+animation: slideInFromRight 1s ease-out,rotateImage 8s linear infinite,changeImage 8s linear infinite;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+.container {
+  padding: 16px;
+}
+
+.enter{
+color:black;
+padding:10px 25px;
+width:300px;
+font-size:20px;
+opacity: 0.6;
+background-color:white;
+border:1px solid #fff;
+border-radius:10px;
+outline:none;
+cousor:pointer;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 92%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; 
+  border:1px solid #fff;
+border-radius:20px;
+outline:none;
+cousor:pointer;
+height:50%;
+  width: 20%; 
+}
+.close {
+float:right;
+margin-right:20px;
+  position: absolute
+  right: 25px;
+  top: 0;
+  margin-top:-15px;
+  border:1px solid #red;
+border-radius:20px;
+outline:black;
+cousor:pointer;
+  color:red;
+  font-size: 35px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: darkred;
+  cursor: pointer;
+}
+.table{
+font-size: 20px;
+top:100px;
+margin:auto;
+}
+.submit{
+color:white;
+padding:10px 25px;
+width:auto;
+background-color:grey;
+border:1px solid #fff;
+border-radius:20px;
+outline:none;
+cousor:pointer;
+margin-top:20px;
+margin-left:85px;
+}
+.submit button:hover,.submit button:focus {
+  background-color:green;
+}
+.payment{
+margin-left:40px;
+margin-top:20px;
+width:70%;
+}
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+} 
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+</style>
+</head>
+<body>
+<img src="restaurant.png" class="nav">
+ <div class="text">
+ <div class="style">
+  <h1><b>welcome</h1>
+  <p>"We’ve been serving British Columbians since 1928, and<br>
+  we’ve been a part of it all – every memory big or small.<br> 
+  Our roots run deep and for over 90 years, we’ve shared <br>
+  these special life moments together. It’s this that makes<br>
+  White Spot meals more than just food—it’s something that <br>connects all of BC."</br></p>
+  <h4>Please click on button to order</h4>
+
+<button onclick="document.getElementById('id01').style.display='block'" class="enter" >Enter</button>
+</div>
+<div class="reserve">
+  <a href="page.html"><button class="reservation" ><i style="margin-right:10px;font-size:15px" class="fa-regular fa-calendar-days" style="color: #fcfcfd;"></i><b>Reservation</b></button></i></a>
+  </div>
+  <div class="png">
+  <img src="pizza.png" class="png">
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="page1.html" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close">&times;</span>
+      
+    </div>
+
+    <div class="container">
+	
+    <img src="restaurant.png" class="payment" alt="Image Description" >
+      <label for="psw" class="table"><b><br>Please enter table number</b></br></label>
+      <input type="text" id="myInput">
+	  
+     <button style="width:auto;"class="submit">Submit</button>   
+    </div>
+  </form>
+</header>
+<script>
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
